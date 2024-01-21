@@ -3,7 +3,9 @@ uint16_t sensorValues[8];
 uint8_t IR_digital_array[8];
 uint8_t IR_pins[] = {A8, A9, A10, A11, A12, A13, A14, A15}; // IR array pins
 
-// Motor driver pins- ENTC
+// Motor driver pins
+// INA - Speed control pins
+// INB - Phase control pins
 uint8_t INA_1 = 2;
 uint8_t INB_1 = 23;
 uint8_t INA_2 = 3;
@@ -124,7 +126,7 @@ void pid_line_following() {
     control_signal_1 = Basespeed - round(constrain(CT, -255, 255));
 
     // motor_control(1, control_signal_1); motor_control(2, control_signal_2);
-    Rotate_Wheels(control_signal_1, control_signal_2 + 12);
+    Rotate_Wheels(control_signal_1, control_signal_2);
     delay(4);
 }
 
