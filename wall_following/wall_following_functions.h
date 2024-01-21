@@ -1,4 +1,6 @@
-// Motor driver pins- ENTC
+// Motor driver pins
+// INA - Speed control pins
+// INB - Phase control pins
 uint8_t INA_1=2;
 uint8_t INB_1=23;
 uint8_t INA_2=3;
