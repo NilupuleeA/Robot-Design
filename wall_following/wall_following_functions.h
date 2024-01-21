@@ -125,7 +125,7 @@ void wPID_control() {
   }
   
   else{
-    Rotate_Wheels(LMotorSpeed,RMotorSpeed+12); 
+    Rotate_Wheels(LMotorSpeed, RMotorSpeed); 
   }    
 
   // Print the motor speed
@@ -151,7 +151,7 @@ void wPID_control() {
     RMotorSpeed = MAX_SPEED;
   }
 
-  Rotate_Wheels(LMotorSpeed,RMotorSpeed+12);
+  Rotate_Wheels(LMotorSpeed, RMotorSpeed);
 
   Serial.print("LMS: ");
   Serial.print(LMotorSpeed);
